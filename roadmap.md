@@ -1,42 +1,46 @@
 ```mermaid
 flowchart LR
 
-subgraph A[Learning Dynamics]
-    A1[Linear Regression]
-    A2[Loss Landscape]
-    A3[Bias Variance]
-    A1 --> A2 --> A3
+A[Learning<br/>Dynamics] --> B[Structure<br/>Formation]
+B --> C[Representation<br/>Learning]
+C --> D[Attention &<br/>Transformers]
+D --> E[Explainability &<br/>Human Loop]
+
+subgraph A1[ ]
+    A11[Linear Regression]
+    A12[Loss Landscape]
 end
 
-subgraph B[Structure Formation]
-    B1[K-Means]
-    B2[Decision Tree]
-    B3[KNN]
-    B1 --> B2 --> B3
+subgraph B1[ ]
+    B11[K-Means]
+    B12[Decision Tree]
 end
 
-subgraph C[Representation Learning]
-    C1[PCA]
-    C2[Neural Network]
-    C3[Feature Space]
-    C1 --> C2 --> C3
+subgraph C1[ ]
+    C11[PCA]
+    C12[Neural Network]
 end
 
-subgraph D[Attention and Transformers]
-    D1[Attention Weights]
-    D2[Vision Transformer]
-    D3[Multimodal Fusion]
-    D1 --> D2 --> D3
+subgraph D1[ ]
+    D11[Attention]
+    D12[Vision Transformer]
 end
 
-subgraph E[Explainability and Human Loop]
-    E1[Explainable AI]
-    E2[Counterfactuals]
-    E3[Human in Loop]
-    E1 --> E2 --> E3
+subgraph E1[ ]
+    E11[XAI]
+    E12[Counterfactuals]
 end
 
-A3 --> B1 --> C1 --> D1 --> E1
+A --> A11
+A --> A12
+B --> B11
+B --> B12
+C --> C11
+C --> C12
+D --> D11
+D --> D12
+E --> E11
+E --> E12
 
 style A fill:#E3F2FD,stroke:#1E88E5
 style B fill:#E8F5E9,stroke:#43A047
