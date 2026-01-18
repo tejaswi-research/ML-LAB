@@ -2,10 +2,12 @@
 flowchart LR
 
 %% ===== Main flow =====
-A[Learning Dynamics] --> B[Structure Formation]
-B --> C[Representation Learning]
-C --> D[Attention & Transformers]
-D --> E[Explainability & Human Loop]
+A([Learning Dynamics])
+B([Structure Formation])
+C([Representation Learning])
+D([Attention & Transformers])
+E([Explainability & Human Loop])
+
 
 %% ===== Details =====
 A --> A1[Linear Regression]
