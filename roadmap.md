@@ -12,8 +12,7 @@ I --> J[Representation Learning]
 J --> K[Attention Mechanism]
 K --> L[Explainable AI]
 
-## Research Extensions (Active & Emerging)
-
+```mermaid
 flowchart TB
 A[Representation Learning] --> B[Autoencoders]
 A --> C[Contrastive Learning]
