@@ -1,57 +1,68 @@
 ```mermaid
 flowchart LR
 
-%% ===== Main flow =====
-A([Learning Dynamics])
-B([Structure Formation])
-C([Representation Learning])
-D([Attention & Transformers])
-E([Explainability & Human Loop])
+%% =========================
+%% FOUNDATIONS (CORE SPINE)
+%% =========================
+A[Linear Regression] --> B[Logistic Regression]
+B --> C[Loss Functions & Gradients]
+C --> D[Bias Variance]
+D --> E[K-Means]
+E --> F[KNN]
+F --> G[Decision Tree]
+G --> H[PCA]
+H --> I[Neural Network]
 
+%% =========================
+%% REPRESENTATION LEARNING
+%% =========================
+I --> J[Representation Learning]
+J --> J1[Autoencoders]
+J --> J2[Contrastive Learning]
+J --> J3[Self-Supervised Learning]
 
-%% ===== Details =====
-A --> A1[Linear Regression]
-A --> A2[Loss Landscape]
+%% =========================
+%% ATTENTION & TRANSFORMERS (TRENDING)
+%% =========================
+J --> K[Attention Mechanism]
+K --> K1[Vision Transformer (ViT)]
+K --> K2[Swin Transformer]
+K --> K3[CLIP]
+K --> K4[MAE]
 
-B --> B1[K-Means]
-B --> B2[Decision Tree]
+%% =========================
+%% MULTIMODAL & REASONING
+%% =========================
+K --> L[Multimodal Learning]
+L --> L1[Vision + Text Models]
+L --> L2[Foundation Models]
 
-C --> C1[PCA]
-C --> C2[Neural Network]
+%% =========================
+%% EXPLAINABILITY & HUMAN LOOP
+%% =========================
+L --> M[Explainable AI]
+M --> M1[SHAP / Attribution]
+M --> M2[Counterfactuals]
+M2 --> N[Human in Loop ML]
 
-D --> D1[Attention]
-D --> D2[Vision Transformer]
-
-E --> E1[XAI]
-E --> E2[Counterfactuals]
-
-%% ===== Styling (IMPORTANT) =====
+%% =========================
+%% STYLING
+%% =========================
 style A fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
-style B fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
-style C fill:#F9A825,stroke:#FFFFFF,color:#000000
-style D fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
-style E fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
+style B fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
+style C fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
+style D fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
 
-style A1 fill:#1E1E1E,stroke:#90CAF9,color:#FFFFFF
-style A2 fill:#1E1E1E,stroke:#90CAF9,color:#FFFFFF
+style E fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
+style F fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
+style G fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
 
-style B1 fill:#1E1E1E,stroke:#A5D6A7,color:#FFFFFF
-style B2 fill:#1E1E1E,stroke:#A5D6A7,color:#FFFFFF
+style H fill:#F9A825,stroke:#FFFFFF,color:#000000
+style I fill:#F9A825,stroke:#FFFFFF,color:#000000
 
-style C1 fill:#1E1E1E,stroke:#FFE082,color:#FFFFFF
-style C2 fill:#1E1E1E,stroke:#FFE082,color:#FFFFFF
+style J fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
+style K fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
+style L fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
 
-style D1 fill:#1E1E1E,stroke:#CE93D8,color:#FFFFFF
-style D2 fill:#1E1E1E,stroke:#CE93D8,color:#FFFFFF
-
-style E1 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
-style E2 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
-
-%% ===== Make the main path brighter =====
-linkStyle 0 stroke:#FFFFFF,stroke-width:3px
-linkStyle 1 stroke:#FFFFFF,stroke-width:3px
-linkStyle 2 stroke:#FFFFFF,stroke-width:3px
-linkStyle 3 stroke:#FFFFFF,stroke-width:3px
-
-
-
+style M fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
+style N fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
