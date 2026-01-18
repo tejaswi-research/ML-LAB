@@ -1,5 +1,8 @@
 # ML Lab
 
+![ML Lab Roadmap](assets/roadmap.png)
+
+
 This repository contains research prototypes and visual tools for understanding how machine learning models learn, evolve, and make decisions.
 
 The goal is to bridge the gap between **conceptual understanding and code**, with a focus on learning dynamics, interpretability, and visual intuition.
