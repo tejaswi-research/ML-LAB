@@ -1,41 +1,52 @@
 ```mermaid
 flowchart LR
 
-%% ===== CORE SPINE =====
-A[Linear Regression] --> B[Logistic Regression]
-B --> C[Loss and Gradients]
-C --> D[Bias Variance]
-D --> E[K Means]
-E --> F[KNN]
-F --> G[Decision Tree]
-G --> H[PCA]
-H --> I[Neural Network]
+%% =========================
+%% BASIC FOUNDATIONS
+%% =========================
+subgraph A[Optimization and Learning]
+    A1[Linear Regression] --> A2[Logistic Regression]
+    A2 --> A3[Loss and Gradients]
+    A3 --> A4[Bias Variance]
+end
 
-%% ===== GROUPED EXTENSIONS =====
-I --> J[Representation Learning]
-J --> K[Attention Models]
-K --> L[Explainable AI]
+subgraph B[Classical Machine Learning]
+    B1[K Means] --> B2[KNN]
+    B2 --> B3[Decision Tree]
+end
 
-%% ===== TRENDING MODELS (GROUPED, NOT EXPANDED) =====
-J -.-> J1[Autoencoders]
-J -.-> J2[Contrastive Learning]
-K -.-> K1[Vision Transformer]
-K -.-> K2[CLIP]
-L -.-> L1[Counterfactuals]
+subgraph C[Feature and Representation]
+    C1[PCA] --> C2[Neural Network]
+end
 
-%% ===== STYLING =====
-style A fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
-style B fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
-style C fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
-style D fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
+A4 --> B1
+B3 --> C1
 
-style E fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
-style F fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
-style G fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
+%% =========================
+%% MODERN LEARNING
+%% =========================
+C2 --> D[Representation Learning]
+D --> E[Attention Models]
+E --> F[Explainable AI]
 
-style H fill:#F9A825,stroke:#FFFFFF,color:#000000
-style I fill:#F9A825,stroke:#FFFFFF,color:#000000
+%% =========================
+%% TRENDING MODELS (HINTED)
+%% =========================
+D -.-> D1[Autoencoders]
+D -.-> D2[Contrastive Learning]
 
-style J fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
-style K fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
-style L fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
+E -.-> E1[Vision Transformer]
+E -.-> E2[CLIP]
+
+F -.-> F1[Counterfactuals]
+
+%% =========================
+%% STYLING
+%% =========================
+style A fill:#1E88E5,stroke:#FFFFFF,color:#FFFFFF
+style B fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
+style C fill:#F9A825,stroke:#FFFFFF,color:#000000
+
+style D fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
+style E fill:#8E24AA,stroke:#FFFFFF,color:#FFFFFF
+style F fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
