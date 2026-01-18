@@ -46,7 +46,10 @@ style E1 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
 style E2 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
 
 %% ===== Make the main path brighter =====
-linkStyle 0 stroke:#FFFFFF,stroke-width:2px
-linkStyle 1 stroke:#FFFFFF,stroke-width:2px
-linkStyle 2 stroke:#FFFFFF,stroke-width:2px
-linkStyle 3 stroke:#FFFFFF,stroke-width:2px
+linkStyle 0 stroke:#FFFFFF,stroke-width:3px
+linkStyle 1 stroke:#FFFFFF,stroke-width:3px
+linkStyle 2 stroke:#FFFFFF,stroke-width:3px
+linkStyle 3 stroke:#FFFFFF,stroke-width:3px
+
+
+
