@@ -1,49 +1,52 @@
 ```mermaid
 flowchart LR
 
-A[Learning<br/>Dynamics] --> B[Structure<br/>Formation]
-B --> C[Representation<br/>Learning]
-C --> D[Attention &<br/>Transformers]
-D --> E[Explainability &<br/>Human Loop]
+%% ===== Main flow =====
+A[Learning Dynamics] --> B[Structure Formation]
+B --> C[Representation Learning]
+C --> D[Attention & Transformers]
+D --> E[Explainability & Human Loop]
 
-subgraph A1[ ]
-    A11[Linear Regression]
-    A12[Loss Landscape]
-end
+%% ===== Details =====
+A --> A1[Linear Regression]
+A --> A2[Loss Landscape]
 
-subgraph B1[ ]
-    B11[K-Means]
-    B12[Decision Tree]
-end
+B --> B1[K-Means]
+B --> B2[Decision Tree]
 
-subgraph C1[ ]
-    C11[PCA]
-    C12[Neural Network]
-end
+C --> C1[PCA]
+C --> C2[Neural Network]
 
-subgraph D1[ ]
-    D11[Attention]
-    D12[Vision Transformer]
-end
+D --> D1[Attention]
+D --> D2[Vision Transformer]
 
-subgraph E1[ ]
-    E11[XAI]
-    E12[Counterfactuals]
-end
+E --> E1[XAI]
+E --> E2[Counterfactuals]
 
-A --> A11
-A --> A12
-B --> B11
-B --> B12
-C --> C11
-C --> C12
-D --> D11
-D --> D12
-E --> E11
-E --> E12
+%% ===== Styling (IMPORTANT) =====
+style A fill:#1976D2,stroke:#FFFFFF,color:#FFFFFF
+style B fill:#2E7D32,stroke:#FFFFFF,color:#FFFFFF
+style C fill:#F9A825,stroke:#FFFFFF,color:#000000
+style D fill:#7B1FA2,stroke:#FFFFFF,color:#FFFFFF
+style E fill:#C2185B,stroke:#FFFFFF,color:#FFFFFF
 
-style A fill:#E3F2FD,stroke:#1E88E5
-style B fill:#E8F5E9,stroke:#43A047
-style C fill:#FFF3E0,stroke:#FB8C00
-style D fill:#F3E5F5,stroke:#8E24AA
-style E fill:#FCE4EC,stroke:#D81B60
+style A1 fill:#1E1E1E,stroke:#90CAF9,color:#FFFFFF
+style A2 fill:#1E1E1E,stroke:#90CAF9,color:#FFFFFF
+
+style B1 fill:#1E1E1E,stroke:#A5D6A7,color:#FFFFFF
+style B2 fill:#1E1E1E,stroke:#A5D6A7,color:#FFFFFF
+
+style C1 fill:#1E1E1E,stroke:#FFE082,color:#FFFFFF
+style C2 fill:#1E1E1E,stroke:#FFE082,color:#FFFFFF
+
+style D1 fill:#1E1E1E,stroke:#CE93D8,color:#FFFFFF
+style D2 fill:#1E1E1E,stroke:#CE93D8,color:#FFFFFF
+
+style E1 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
+style E2 fill:#1E1E1E,stroke:#F48FB1,color:#FFFFFF
+
+%% ===== Make the main path brighter =====
+linkStyle 0 stroke:#FFFFFF,stroke-width:2px
+linkStyle 1 stroke:#FFFFFF,stroke-width:2px
+linkStyle 2 stroke:#FFFFFF,stroke-width:2px
+linkStyle 3 stroke:#FFFFFF,stroke-width:2px
